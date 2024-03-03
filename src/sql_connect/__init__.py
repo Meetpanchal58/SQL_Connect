@@ -1,1 +1,1 @@
-from src.sql_connect.MySQL import *
+from sql_connect.MySQL import *
