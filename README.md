@@ -1,39 +1,39 @@
 ```markdown
-## Usage Guide
+# Usage Guide
 
-### Installation of Load_MySQL Package
+## Installation of Load_MySQL Package
 You can install the `load_MySQL` package via pip:
 
 ```bash
 pip install load_MySQL
 ```
 
-### Importing the class
+## Importing the class
 MySQLOperation class from sql_connect.MySQL module:
 
-```bash
+```python
 from sql_connect.MySQL import MySQLOperation
 ```
 
-### Connecting to Database
+## Connecting to Database
 Create an instance of MySQLOperation class with your database credentials:
 
-```bash
-db = MySQLOperation(host="localhost", user=" username", password="password", database="database name")
+```python
+db = MySQLOperation(host="localhost", user="username", password="password", database="database name")
 db.connect()
 ```
 
-### SELECT Queries
+## SELECT Queries
 You can execute SQL queries using the execute_query() method of the MySQLOperation instance. Results are stored in a pandas DataFrame
 
-```bash
+```python
 query = "SELECT * FROM student"
 student_records_df = db.execute_query(query)
 ```
 
-#### More Examples
-- Students Records that starts with A and have marks greater than 50
-```bash
+### More Examples
+- Students Records that start with 'A' and have marks greater than 50
+```python
 query2 = """
 SELECT 
 name,
@@ -44,8 +44,8 @@ WHERE name LIKE 'A%' AND mark > 50;
 student_records_df = db.execute_query(query2)
 ```
 
-- Students's Highest Marks of only those class's with Highest Marks greater than 80 
-```bash
+- Students' Highest Marks of only those classes with Highest Marks greater than 80 
+```python
 query3 = """
 SELECT class,
 MAX(mark) AS max_mark
@@ -56,40 +56,38 @@ HAVING max_mark > 80;
 student_records_df = db.execute_query(query3)
 
 ```
-More Information
-For more detailed examples and coverage of features, refer to the load_MySQL Tutorial in the experiments/load_MySQL Tutorial directory
-[load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb)
 
-<br><br>
+## More Information
+For more detailed examples and coverage of features, refer to the [load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb) in the experiments/load_MySQL Tutorial directory
+
+---
 
 ## Usage of All files 
 
-### requirements_dev.txt we use for the testing
+### requirements_dev.txt for testing
 - It makes it easier to install and manage dependencies for development and testing, separate from the dependencies required for production.
 
-### difference between requirements_dev.txt and requirements.txt
+### Difference between requirements_dev.txt and requirements.txt
 
-- requirements.txt is used to specify the dependencies required to run the production code of a Python project, while requirements_dev.txt is used to specify the dependencies required for development and testing purposes.
+- `requirements.txt` is used to specify the dependencies required to run the production code of a Python project, while `requirements_dev.txt` is used to specify the dependencies required for development and testing purposes.
 
 ### tox.ini
-- We use if for the testing in the python package testing against different version of the python 
+- We use it for testing the Python package against different versions of Python.
 
-### how tox works tox enviornment creation
-1. Install depedencies and packages 
+### How tox works: tox environment creation
+1. Install dependencies and packages 
 2. Run commands
-3. Its a combination of the (virtualenvwrapper and makefile)
-4. It creates a .tox
-
+3. It's a combination of virtualenvwrapper and makefile
+4. It creates a .tox directory
 
 #### pyproject.toml
-- it is being used for configuration the python project it is a alternative of the setup.cfg file. its containts configuration related to the build system
-such as the build tool used package name version author license and dependencies
+- It is used for configuring the Python project. It's an alternative to the setup.cfg file. It contains configuration related to the build system such as the build tool used, package name, version, author, license, and dependencies.
 
 #### setup.cfg
-- In summary, setup.cfg is used by setuptools to configure the packaging and installation of a Python projec
+- In summary, setup.cfg is used by setuptools to configure the packaging and installation of a Python project.
 
 #### Testing python application
-*types of testing*
+*Types of testing*
 1. Automated testing 
 2. Manual testing
 
@@ -98,7 +96,6 @@ such as the build tool used package name version author license and dependencies
 2. Integration tests
 
 #### Testing frameworks
-
 1. pytest
 2. unittest
 3. robotframework
@@ -106,9 +103,9 @@ such as the build tool used package name version author license and dependencies
 5. behave
 6. doctest
 
-##### check with the code style formatting and syntax(coding standard)
+##### Check with the code style formatting and syntax (coding standard)
 
 1. pylint
-2. flake8(it is best because it containt 3 library pylint pycodestyle mccabe)
+2. flake8 (it is best because it contains 3 libraries: pylint, pycodestyle, mccabe)
 3. pycodestyle
-
+```
