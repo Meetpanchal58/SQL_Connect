@@ -4,8 +4,8 @@
 ## Installation of Load_MySQL Package
 You can install the `load_MySQL` package via pip:
 
-```bash
-pip install load_MySQL
+```python
+!pip install load_MySQL
 ```
 
 ## Importing the class
