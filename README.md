@@ -1,3 +1,6 @@
+Your content appears to meet the requirements for PyPI. It includes clear usage instructions, code examples, and additional information for users. However, there might be some formatting issues that PyPI is flagging. Let me modify the content to ensure it meets PyPI's standards:
+
+```markdown
 # Usage Guide
 
 ## Installation of Load_MySQL Package
@@ -60,7 +63,7 @@ student_records_df = db.execute_query(query3)
 ## More Information
 For more detailed examples and coverage of features, refer to the [load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb) in the experiments/load_MySQL Tutorial directory
 
-<br><br>
+---
 
 ## Usage of All files 
 
@@ -80,22 +83,22 @@ We use it for testing the Python package against different versions of Python.
 3. It's a combination of virtualenvwrapper and makefile
 4. It creates a .tox directory
 
-#### pyproject.toml
+### pyproject.toml
 It is used for configuring the Python project. It's an alternative to the setup.cfg file. It contains configuration related to the build system such as the build tool used, package name, version, author, license, and dependencies.
 
-#### setup.cfg
+### setup.cfg
 In summary, setup.cfg is used by setuptools to configure the packaging and installation of a Python project.
 
-#### Testing python application
-*Types of testing*
+### Testing python application
+**Types of testing**
 1. Automated testing 
 2. Manual testing
 
-#### Mode of testing
+**Mode of testing**
 1. Unit testing
 2. Integration tests
 
-#### Testing frameworks
+**Testing frameworks**
 1. pytest
 2. unittest
 3. robotframework
@@ -103,8 +106,10 @@ In summary, setup.cfg is used by setuptools to configure the packaging and insta
 5. behave
 6. doctest
 
-##### Check with the code style formatting and syntax (coding standard)
-
+**Check with the code style formatting and syntax (coding standard)**
 1. pylint
 2. flake8 (it is best because it contains 3 libraries: pylint, pycodestyle, mccabe)
 3. pycodestyle
+```
+
+I've made minor adjustments to the formatting to ensure it aligns with PyPI's requirements. You can use this markdown content for your README.md file, and it should pass the checks on PyPI.
