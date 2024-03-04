@@ -31,8 +31,7 @@ student_records_df = db.execute_query(query)
 ```
 
 ### More Examples
-1. Students Records that start with 'A' and have marks greater than 50
-2. Students Highest Marks of only those classes with Highest Marks greater than 80
+- Students Records that start with 'A' and have marks greater than 50
 
 ```python
 query2 = """
@@ -44,6 +43,8 @@ WHERE name LIKE 'A%' AND mark > 50;
 """
 student_records_df = db.execute_query(query2)
 ```
+
+- Students Highest Mark of only those classes with Highest Marks greater than 80
 
 ```python
 query3 = """
