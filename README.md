@@ -1,4 +1,4 @@
-## Usage of Package
+## Usage Guide
 
 ### Installation of Load_MySQL Package
 You can install the `load_MySQL` package via pip:
