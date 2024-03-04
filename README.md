@@ -61,7 +61,7 @@ student_records_df = db.execute_query(query3)
 For more detailed examples and coverage of features, refer to the [load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb) in the experiments/load_MySQL Tutorial directory
 
 ---
-```
+
 ## Usage of All files
 
 ### requirements_dev.txt for testing
@@ -107,4 +107,3 @@ In summary, setup.cfg is used by setuptools to configure the packaging and insta
 1. pylint
 2. flake8 (it is best because it contains 3 libraries: pylint, pycodestyle, mccabe)
 3. pycodestyle
-```
