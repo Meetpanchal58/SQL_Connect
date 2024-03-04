@@ -59,9 +59,7 @@ More Information
 For more detailed examples and coverage of features, refer to the load_MySQL Tutorial in the experiments/load_MySQL Tutorial directory
 [load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb)
 
-<br>
----
-<br>
+<br><br>
 
 ## Usage of All files 
 
