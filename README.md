@@ -1,11 +1,67 @@
-# Load MySQL Package
+## Usage of Package
 
-## Installation
+### Installation of Load_MySQL Package
 You can install the `load_MySQL` package via pip:
 
 ```bash
 pip install load_MySQL
 ```
+
+### Importing the class
+MySQLOperation class from sql_connect.MySQL module:
+
+```bash
+from sql_connect.MySQL import MySQLOperation
+```
+
+### Connecting to Database
+Create an instance of MySQLOperation class with your database credentials:
+
+```bash
+db = MySQLOperation(host="localhost", user=" username", password="password", database="database name")
+db.connect()
+```
+
+### SELECT Queries
+You can execute SQL queries using the execute_query() method of the MySQLOperation instance. Results are stored in a pandas DataFrame
+
+```bash
+query = "SELECT * FROM student"
+student_records_df = db.execute_query(query)
+```
+
+#### More Examples
+- Students Records that starts with A and have marks greater than 50
+```bash
+query2 = """
+SELECT 
+name,
+mark 
+FROM student 
+WHERE name LIKE 'A%' AND mark > 50;
+"""
+student_records_df = db.execute_query(query2)
+```
+
+- Students's Highest Marks of only those class's with Highest Marks greater than 80 
+```bash
+query3 = """
+SELECT class,
+MAX(mark) AS max_mark
+FROM student
+GROUP BY class
+HAVING max_mark > 80;
+"""
+student_records_df = db.execute_query(query3)
+
+```
+More Information
+For more detailed examples and coverage of features, refer to the load_MySQL Tutorial in the experiments/load_MySQL Tutorial directory
+[load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb)
+
+---
+
+## Usage of All files 
 
 ### requirements_dev.txt we use for the testing
 - It makes it easier to install and manage dependencies for development and testing, separate from the dependencies required for production.
