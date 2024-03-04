@@ -44,7 +44,7 @@ WHERE name LIKE 'A%' AND mark > 50;
 student_records_df = db.execute_query(query2)
 ```
 
-- Students' Highest Marks of only those classes with Highest Marks greater than 80
+- Students Highest Marks of only those classes with Highest Marks greater than 80
 
 ```python
 query3 = """
