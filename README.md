@@ -32,6 +32,7 @@ student_records_df = db.execute_query(query)
 
 ### More Examples
 - Students Records that start with 'A' and have marks greater than 50
+  
 ```python
 query2 = """
 SELECT 
@@ -43,7 +44,8 @@ WHERE name LIKE 'A%' AND mark > 50;
 student_records_df = db.execute_query(query2)
 ```
 
-- Students' Highest Marks of only those classes with Highest Marks greater than 80 
+- Students' Highest Marks of only those classes with Highest Marks greater than 80
+  
 ```python
 query3 = """
 SELECT class,
@@ -58,7 +60,7 @@ student_records_df = db.execute_query(query3)
 ## More Information
 For more detailed examples and coverage of features, refer to the [load_MySQL Tutorial](https://github.com/Meetpanchal58/SQL_Connect/blob/main/experiments/load_MySQL%20Tutorial.ipynb) in the experiments/load_MySQL Tutorial directory
 
----
+<br><br>
 
 ## Usage of All files 
 
