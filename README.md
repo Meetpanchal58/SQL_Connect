@@ -4,21 +4,27 @@ Usage Guide
 Installation of Load_MySQL Package
 -----------------------------------
 
-You can install the ``load_MySQL`` package via pip::
+You can install the ``load_MySQL`` package via pip:
+
+.. code-block:: bash
 
     pip install load_MySQL
 
 Importing the class
 --------------------
 
-MySQLOperation class from sql_connect.MySQL module::
+MySQLOperation class from sql_connect.MySQL module:
+
+.. code-block:: python
 
     from sql_connect.MySQL import MySQLOperation
 
 Connecting to Database
 -----------------------
 
-Create an instance of MySQLOperation class with your database credentials::
+Create an instance of MySQLOperation class with your database credentials:
+
+.. code-block:: python
 
     db = MySQLOperation(host="localhost", user="username", password="password", database="database name")
     db.connect()
@@ -26,7 +32,9 @@ Create an instance of MySQLOperation class with your database credentials::
 SELECT Queries
 ---------------
 
-You can execute SQL queries using the execute_query() method of the MySQLOperation instance. Results are stored in a pandas DataFrame::
+You can execute SQL queries using the execute_query() method of the MySQLOperation instance. Results are stored in a pandas DataFrame:
+
+.. code-block:: python
 
     query = "SELECT * FROM student"
     student_records_df = db.execute_query(query)
@@ -34,7 +42,9 @@ You can execute SQL queries using the execute_query() method of the MySQLOperati
 More Examples
 -------------
 
-- Students Records that start with 'A' and have marks greater than 50::
+- Students Records that start with 'A' and have marks greater than 50:
+
+.. code-block:: python
 
     query2 = """
     SELECT 
@@ -45,7 +55,9 @@ More Examples
     """
     student_records_df = db.execute_query(query2)
 
-- Students' Highest Marks of only those classes with Highest Marks greater than 80::
+- Students' Highest Marks of only those classes with Highest Marks greater than 80:
+
+.. code-block:: python
 
     query3 = """
     SELECT class,
