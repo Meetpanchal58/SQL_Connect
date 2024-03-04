@@ -1,23 +1,24 @@
+```markdown
 # Usage Guide
 
 ## Installation of Load_MySQL Package
 You can install the `load_MySQL` package via pip:
 
-```
-!pip install load_MySQL
+```bash
+pip install load_MySQL
 ```
 
 ## Importing the class
 MySQLOperation class from sql_connect.MySQL module:
 
-```
+```python
 from sql_connect.MySQL import MySQLOperation
 ```
 
 ## Connecting to Database
 Create an instance of MySQLOperation class with your database credentials:
 
-```
+```python
 db = MySQLOperation(host="localhost", user="username", password="password", database="database name")
 db.connect()
 ```
@@ -25,14 +26,14 @@ db.connect()
 ## SELECT Queries
 You can execute SQL queries using the execute_query() method of the MySQLOperation instance. Results are stored in a pandas DataFrame
 
-```
+```python
 query = "SELECT * FROM student"
 student_records_df = db.execute_query(query)
 ```
 
 ### More Examples
 - Students Records that start with 'A' and have marks greater than 50
-```
+```python
 query2 = """
 SELECT 
 name,
@@ -53,6 +54,7 @@ GROUP BY class
 HAVING max_mark > 80;
 """
 student_records_df = db.execute_query(query3)
+
 ```
 
 ## More Information
